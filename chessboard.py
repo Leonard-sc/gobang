@@ -11,6 +11,7 @@ class Chessboard():
         # 数组形态
         self.array_cb = None
 
+
     def blitme(self):
         # 绘制棋盘
         gap = int(self.max_edge/self.board_size)
