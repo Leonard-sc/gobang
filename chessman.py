@@ -1,7 +1,7 @@
 import pygame
 from pygame.sprite import Sprite
 class Chessman(Sprite):
-    def __init__(self,screen,color,position,settings):
+    def __init__(self,screen,color,draw_pos,settings):
         super().__init__()
         if color == 'white':
             self.color = (255,255,255)
@@ -9,11 +9,7 @@ class Chessman(Sprite):
             self.color = (0,0,0)
         self.screen = screen
         self.settings = settings
-        self.position = position
+        self.draw_pos = draw_pos
 
     def blitme(self):
-        pygame.draw.circle(self.screen,self.color,self.position,self.settings.chessman_size)
-
-    def pin_drawloc(self):
-        # TODO: 计算真正绘制坐标
-        pass
+        pygame.draw.circle(self.screen,self.color,self.draw_pos,self.settings.chessman_size)
