@@ -1,8 +1,10 @@
 import sys
 import pygame
 import game_functions as gf
+from pygame.sprite import Group
 from settings import  Settings
 from chessboard import Chessboard
+
 
 def run_game():
 
@@ -10,14 +12,11 @@ def run_game():
     settings = Settings()
     screen = pygame.display.set_mode((settings.screen_width,settings.screen_heigh))
     chessboard = Chessboard(screen,settings)
-    white = pygame.image.load('./images/white.png')
-
-
+    chessmans = Group()
     while 1:
-        for event in pygame.event.get():
-            if event.type in (pygame.QUIT,pygame.KEYDOWN):
-                sys.exit()
-        gf.update_screen(screen,settings,chessboard)
+        gf.check_events(screen,settings,chessmans,chessboard)
+        gf.update_screen(screen,settings,chessmans,chessboard)
+
 
 
 

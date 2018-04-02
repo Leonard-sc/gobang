@@ -6,3 +6,4 @@ class Settings():
         self.screen_heigh = 600
         self.board_size = 9
         self.bg_color = (230,230,230)
+        self.chessman_size = 9
