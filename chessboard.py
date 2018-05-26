@@ -1,4 +1,5 @@
 import pygame
+
 class Chessboard():
     def __init__(self,screen,settings):
         self.screen = screen
@@ -13,7 +14,7 @@ class Chessboard():
         self.array_cb = [[0 for i in range(self.board_size)] for i in range(self.board_size)]
         self.pos_map={'screen_pos':[0 for i in range(self.board_size)],'real_pos':[i for i in range(self.board_size)]}
         self.set_map() # 初始话屏幕坐标与棋盘的映射关系
-        print (self.pos_map)
+        # print (self.pos_map)
     def blitme(self):
         # 绘制棋盘
         for i in self.pos_map['screen_pos']:

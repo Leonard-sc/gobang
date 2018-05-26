@@ -1,5 +1,6 @@
 import pygame
 from pygame.sprite import Sprite
+
 class Chessman(Sprite):
     def __init__(self,screen,color,draw_pos,settings):
         super().__init__()
